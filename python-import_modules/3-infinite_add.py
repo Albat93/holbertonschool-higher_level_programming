@@ -7,4 +7,3 @@ if __name__ == "__main__":
     for arg in args:
         total += int(arg)
     print(total)
-
