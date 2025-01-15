@@ -2,10 +2,9 @@
 import sys
 
 if __name__ == "__main__":
-    argv = sys.argv[1:]  # Exclude the script name
-    argc = len(argv)  # Count the number of arguments
+    argv = sys.argv[1:]
+    argc = len(argv)
 
-# Determine the correct wording for "argument(s)"
     if argc == 0:
         print("0 arguments.")
     elif argc == 1:
@@ -13,6 +12,5 @@ if __name__ == "__main__":
     else:
         print("{} arguments:".format(argc))
 
-# Print each argument with its position
     for i, arg in enumerate(argv, 1):
         print("{}: {}".format(i, arg))
