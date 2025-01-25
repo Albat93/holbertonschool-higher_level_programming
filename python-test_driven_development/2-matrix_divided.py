@@ -8,6 +8,8 @@ Raises:
     - TypeError: If the input matrix is not valid or the divisor is not number.
     - ZeroDivisionError: If the divisor is zero.
 """
+
+
 def matrix_divided(matrix, div):
     """
     Divides all elements of a matrix by a given divisor.
