@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-#!/usr/bin/python3
-"""class Square that defines a square"""
+""" Create a new class, we'll define it with size
+"""
 
 
 class Square:
-    """size is private attribute"""
+    """this is a square with size
+    """
 
     def __init__(self, size):
         self.__size = size
