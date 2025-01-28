@@ -6,3 +6,4 @@
 class Square:
     """an empty square that we will define soon
     """
+    pass
