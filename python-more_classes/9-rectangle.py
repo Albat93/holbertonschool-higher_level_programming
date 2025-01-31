@@ -2,6 +2,7 @@
 """ Create a new class, we'll define it with size
 """
 
+
 class Rectangle:
     """This is a rectangle with width and height parameters
     """
@@ -51,10 +52,11 @@ class Rectangle:
         return 2 * (self.__width + self.__height)
 
     def __str__(self):
-        """Returns a string representation of the rectangle using print_symbol"""
+        """Returns a string representation of rectangle using print_symbol"""
         if self.__width == 0 or self.__height == 0:
             return ""
-        return "\n".join([str(self.print_symbol) * self.__width for _ in range(self.__height)])
+        return "\n".join([str(self.print_symbol) * self.__width
+                          for _ in range(self.__height)])
 
     def __repr__(self):
         """Returns a string representation for recreating the object"""
