@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module defining the Rectangle class, which inherits from BaseGeometry."""
+"""Module defining geometric classes: BaseGeometry, Rectangle, and Square."""
 
 
 class BaseGeometry:
@@ -59,3 +59,25 @@ class Rectangle(BaseGeometry):
         :return: The area (width * height).
         """
         return self.__width * self.__height
+
+
+class Square(Rectangle):
+    """A class representing a square, inheriting from Rectangle."""
+
+    def __init__(self, size):
+        """
+        Initializes a square with a given size.
+
+        :param size: The side length of the square (must be positive integer).
+        """
+        self.integer_validator("size", size)
+        super().__init__(size, size)
+        self.__size = size
+
+    def __str__(self):
+        """
+        Returns a string representation of the square.
+
+        :return: A formatted string with size.
+        """
+        return f"[Square] {self.__size}/{self.__size}"
