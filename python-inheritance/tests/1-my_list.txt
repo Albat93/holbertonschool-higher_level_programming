@@ -1,44 +1,113 @@
-Test Case 1:
->>> my_list = MyList([3, 1, 4, 1, 5, 9])
->>> my_list.print_sorted()
-[1, 1, 3, 4, 5, 9]
+The ``1-my_list`` module
+============================
 
-Test Case 2:
->>> my_list = MyList([10, -2, 3, 7, 5])
->>> my_list.print_sorted()
-[-2, 3, 5, 7, 10]
+Using ``MyList``
+---------------------
 
-Test Case 3:
->>> my_list = MyList([])
->>> my_list.print_sorted()
-[]
+Importing function from the module:
+    >>> MyList = __import__('1-my_list').MyList
 
-Test Case 4:
->>> my_list = MyList([42])
->>> my_list.print_sorted()
-[42]
 
-Test Case 5:
->>> my_list = MyList([5, 5, 5, 5])
->>> my_list.print_sorted()
-[5, 5, 5, 5]
+Printing a sorted list 1 (positive numbers)
+    >>> my_list = MyList()
+    >>> my_list += [0]
+    >>> my_list.append(4)
+    >>> my_list.append(1)
+    >>> my_list.append(10)
+    >>> my_list.append(3)
+    >>> my_list.append(7)
+    >>> my_list.print_sorted()
+    [0, 1, 3, 4, 7, 10]
 
-Test Case 6:
->>> my_list = MyList("abc")
-Traceback (most recent call last):
-TypeError: list elements must be integers
 
-Test Case 7:
->>> my_list = MyList([3, "a", 5])
-Traceback (most recent call last):
-TypeError: list elements must be integers
+Printing a sorted list 2 (repeated numbers)
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list += [1]
+    >>> my_list.append(2)
+    >>> my_list.append(2)
+    >>> my_list += [2]
+    >>> my_list.print_sorted()
+    [1, 1, 2, 2, 2]
 
-Test Case 8:
->>> my_list = MyList([-3, float("Inf"), 5])
-Traceback (most recent call last):
-OverflowError: cannot process float infinity
 
-Test Case 9:
->>> my_list = MyList([-3, float("NaN"), 5])
-Traceback (most recent call last):
-ValueError: cannot process NaN values
+Printing an sorted list 3 (one number)
+    >>> my_list = MyList()
+    >>> my_list += [3]
+    >>> my_list.print_sorted()
+    [3]
+
+
+Printing an sorted list 4 (positive and negative numbers)
+    >>> my_list = MyList()
+    >>> my_list.append(-5)
+    >>> my_list += [5]
+    >>> my_list += [4]
+    >>> my_list.append(0)
+    >>> my_list.append(-4)
+    >>> my_list.append(1)
+    >>> my_list += [-1]
+    >>> my_list.print_sorted()
+    [-5, -4, -1, 0, 1, 4, 5]
+
+
+Printing an empty list
+    >>> my_list = MyList()
+    >>> my_list.print_sorted()
+    []
+
+
+MyList is an instance of the class list
+    >>> my_list = MyList()
+    >>> isinstance(my_list, list)
+    True
+
+
+Instance has the correct type
+    >>> my_list = MyList()
+    >>> type(my_list) == MyList
+    True
+
+
+MyList is a subclass of list
+    >>> issubclass(MyList, list)
+    True
+
+
+Print_sorted method with 1 passed argument
+    >>> my_list = MyList()
+    >>> my_list.print_sorted([1, 2, 3])
+    Traceback (most recent call last):
+    	      ...
+    TypeError: print_sorted() takes 1 positional argument but 2 were given
+
+
+Print_sorted method with 2 passed arguments
+    >>> my_list = MyList()
+    >>> my_list.print_sorted([1, 2], [5, 4])
+    Traceback (most recent call last):
+    	      ...
+    TypeError: print_sorted() takes 1 positional argument but 3 were given
+
+
+Type of the print_sorted method
+    >>> my_list = MyList()
+    >>> type(my_list.print_sorted)
+    <class 'method'>
+
+
+Check printable string
+    >>> my_list = MyList()
+    >>> my_list.append(5)
+    >>> print(my_list)
+    [5]
+
+Check if print_sorted() returns a new list
+    >>> my_list = MyList()
+    >>> my_list.append(7)
+    >>> my_list.append(1)
+    >>> my_list.append(2)
+    >>> my_list.print_sorted()
+    [1, 2, 7]
+    >>> my_list
+    [7, 1, 2]
