@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Module containing the Rectangle class, which inherits from BaseGeometry."""
 
+
 class BaseGeometry:
     """A class with basic geometric operations."""
 
@@ -24,6 +25,7 @@ class BaseGeometry:
             raise TypeError("{} must be an integer".format(name))
         if value <= 0:
             raise ValueError("{} must be > 0".format(name))
+
 
 class Rectangle(BaseGeometry):
     """A class that represents a rectangle, inheriting from BaseGeometry."""
