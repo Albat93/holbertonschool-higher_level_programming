@@ -6,4 +6,5 @@ the specified class ; otherwise False.
 
 
 def is_kind_of_class(obj, a_class):
+    """is the obj from same class or inherit from"""
     return isinstance(obj, a_class)
