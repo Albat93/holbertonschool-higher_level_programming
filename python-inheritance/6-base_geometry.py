@@ -2,9 +2,10 @@
 """Module defining the BaseGeometry class.
 """
 
+
 class BaseGeometry:
     """A base class for geometric operations."""
 
     def area(self):
-        """Raises an Exception indicating that the method is not implemented."""
+        """Raises Exception indicating that the method is not implemented."""
         raise Exception("area() is not implemented")
