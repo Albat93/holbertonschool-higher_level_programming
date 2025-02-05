@@ -21,13 +21,13 @@ Testing integer_validator with zero (should raise an exception)
     >>> bg.integer_validator("height", 0)
     Traceback (most recent call last):
     ...
-    ValueError: height must be > 0
+    ValueError: height must be greater than 0
 
 Testing integer_validator with negative number (should raise an exception)
     >>> bg.integer_validator("size", -5)
     Traceback (most recent call last):
     ...
-    ValueError: size must be > 0
+    ValueError: size must be greater than 0
 
 Testing integer_validator with non-integer input (string)
     >>> bg.integer_validator("age", "ten")
