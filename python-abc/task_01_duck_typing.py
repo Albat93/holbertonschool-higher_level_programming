@@ -107,9 +107,6 @@ def shape_info(shape):
     Parameters:
         shape (Shape): An object that follows the Shape interface (i.e., has area and perimeter methods).
     """
-    try:
-        # Calling area and perimeter methods (duck typing)
-        print(f"Area: {shape.area()}")
-        print(f"Perimeter: {shape.perimeter()}")
-    except AttributeError as e:
-        print(f"Error: {e}")
+    print(f"Area: {shape.area()}")
+    print(f"Perimeter: {shape.perimeter()}")
+
