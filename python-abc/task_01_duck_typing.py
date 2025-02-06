@@ -43,7 +43,7 @@ class Circle(Shape):
         """
         Calculates the area of the circle.
         """
-        return math.pi * self.radius ** 2
+        return math.pi * (self.radius ** 2)
 
     def perimeter(self):
         """
