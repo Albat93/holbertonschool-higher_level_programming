@@ -13,7 +13,7 @@ def save_to_json_file(my_obj, filename):
 def load_from_json_file(filename):
     '''function that creates an Object from a “JSON file”'''
     with open(filename, "r", encoding="utf_8") as file:
-        json.load(file)
+        return json.load(file)
 
 
 if __name__ == "__main__":
@@ -22,5 +22,6 @@ if __name__ == "__main__":
         item = load_from_json_file(filename)
     except FileNotFoundError:
         item = []
+
     item.extend(sys.argv[1:])
     save_to_json_file(item, filename)
