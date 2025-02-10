@@ -2,7 +2,6 @@
 class Student:
     """define a class student"""
 
-
     def __init__(self, first_name, last_name, age):
         """instanciation of class attribute"""
         self.first_name = first_name
