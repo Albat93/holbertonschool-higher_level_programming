@@ -9,10 +9,12 @@ def save_to_json_file(my_obj, filename):
     with open(filename, "w") as outfile:
         json.dump(my_obj, outfile)
 
+
 def load_from_json_file(filename):
     '''function that creates an Object from a “JSON file”'''
     with open(filename, "r", encoding="utf_8") as file:
         json.load(file)
+
 
 if __name__ == "__main__":
     filename = "add_item.json"
