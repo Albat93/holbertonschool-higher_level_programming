@@ -1,62 +1,63 @@
-# 🌐 Comprendre HTTP et HTTPS
+# 🌐 Understanding HTTP and HTTPS
 
-## 📌 Objectifs
-Ce guide explique les différences entre **HTTP et HTTPS**, la structure des requêtes et réponses HTTP, ainsi que les méthodes et codes de statut les plus courants.
+## 📌 Objectives
+This guide explains the differences between **HTTP and HTTPS**, the structure of HTTP requests and responses, as well as the most common methods and status codes.
 
 ---
 
-## 🔹 1. Différences entre HTTP et HTTPS
+## 🔹 1. Differences Between HTTP and HTTPS
 
-| Critère       | HTTP                          | HTTPS                          |
+| Criterion      | HTTP                          | HTTPS                          |
 |--------------|------------------------------|--------------------------------|
-| **Sécurité**  | Pas sécurisé (données en clair) | Sécurisé avec chiffrement SSL/TLS |
+| **Security**  | Not secure (data in plaintext) | Secure with SSL/TLS encryption |
 | **Port**      | 80                            | 443                            |
-| **Certificat** | Non requis                   | Utilise un certificat SSL      |
-| **Utilisation** | Sites basiques, contenus publics | Sites nécessitant de la sécurité (paiements, connexions, etc.) |
+| **Certificate** | Not required                   | Uses an SSL certificate        |
+| **Usage** | Basic sites, public content | Sites requiring security (payments, logins, etc.) |
 
-**Pourquoi HTTPS est important ?**
-HTTPS protège les données contre le vol et les attaques de type **Man-in-the-Middle (MITM)**.
-
----
-
-## 🔹 2. Structure des requêtes et réponses HTTP
-
-### 📍 **Exemple de requête HTTP**
-- **GET** : Méthode HTTP utilisée.
-- **/index.html** : Ressource demandée.
-- **HTTP/1.1** : Version du protocole.
-- **Host** : Nom du serveur.
-- **User-Agent** : Informations sur le navigateur.
-
-### 📍 **Exemple de réponse HTTP**
-- **HTTP/1.1 200 OK** : Statut de la réponse (succès).
-- **Server** : Type de serveur utilisé.
-- **Content-Type** : Type de contenu envoyé.
+**Why is HTTPS important?**
+HTTPS protects data against theft and **Man-in-the-Middle (MITM)** attacks.
 
 ---
 
-## 🔹 3. Méthodes HTTP et codes de statut
+## 🔹 2. Structure of HTTP Requests and Responses
 
-### 📍 **Méthodes HTTP courantes**
-| Méthode  | Description                          | Cas d'utilisation             |
+### 📍 **Example of an HTTP Request**
+- **GET**: HTTP method used.
+- **/index.html**: Requested resource.
+- **HTTP/1.1**: Protocol version.
+- **Host**: Server name.
+- **User-Agent**: Browser information.
+
+### 📍 **Example of an HTTP Response**
+- **HTTP/1.1 200 OK**: Response status (success).
+- **Server**: Type of server used.
+- **Content-Type**: Type of content sent.
+
+---
+
+## 🔹 3. Common HTTP Methods and Status Codes
+
+### 📍 **Common HTTP Methods**
+| Method  | Description                          | Use Case             |
 |----------|--------------------------------------|--------------------------------|
-| **GET**   | Récupère des données               | Charger une page web          |
-| **POST**  | Envoie des données au serveur      | Envoyer un formulaire         |
-| **PUT**   | Met à jour une ressource           | Modifier un profil utilisateur |
-| **DELETE**| Supprime une ressource             | Supprimer un commentaire      |
+| **GET**   | Retrieves data               | Loading a web page          |
+| **POST**  | Sends data to the server      | Submitting a form         |
+| **PUT**   | Updates a resource           | Modifying a user profile |
+| **DELETE**| Deletes a resource             | Removing a comment      |
 
-### 📍 **Codes de statut HTTP courants**
-| Code  | Signification          | Cas d'utilisation                      |
+### 📍 **Common HTTP Status Codes**
+| Code  | Meaning          | Use Case                      |
 |-------|------------------------|----------------------------------------|
-| **200 OK** | Succès              | La page s'affiche normalement         |
-| **301 Moved Permanently** | Redirection permanente | Un site a changé d'URL              |
-| **403 Forbidden** | Accès refusé         | Page réservée aux utilisateurs autorisés |
-| **404 Not Found** | Ressource inexistante | Page demandée introuvable            |
-| **500 Internal Server Error** | Erreur serveur       | Problème interne du site web         |
+| **200 OK** | Success              | Page loads normally         |
+| **301 Moved Permanently** | Permanent redirection | A site changed its URL              |
+| **403 Forbidden** | Access denied         | Page restricted to authorized users |
+| **404 Not Found** | Resource not found | Requested page not available            |
+| **500 Internal Server Error** | Server error       | Internal site issue         |
 
 ---
 
-## 🎯 **Résumé**
-✅ **HTTPS** est plus sécurisé que **HTTP** grâce au chiffrement SSL/TLS.
-✅ Une requête HTTP contient des **méthodes, en-têtes et paramètres**.
-✅ Les **codes de statut HTTP** indiquent le résultat d’une requête.
+## 🎯 **Summary**
+✅ **HTTPS** is more secure than **HTTP** due to SSL/TLS encryption.
+✅ An HTTP request contains **methods, headers, and parameters**.
+✅ **HTTP status codes** indicate the result of a request.
+

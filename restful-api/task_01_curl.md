@@ -1,70 +1,71 @@
-# 📖 Introduction à `curl`
+# 📖 Introduction to `curl`
 
 ## 📝 Background
 
-`curl` (Client URL) est un outil en ligne de commande permettant de transférer des données depuis ou vers un serveur réseau en utilisant divers protocoles comme HTTP, HTTPS, FTP, etc. Il est largement utilisé pour :
-- **Tester et interagir avec des APIs RESTful** 📡
-- **Diagnostiquer des problèmes de serveur** 🛠️
-- **Prototyper rapidement des requêtes API** ⚡
+`curl` (Client URL) is a command-line tool for transferring data to or from a network server using various protocols like HTTP, HTTPS, FTP, etc. It is widely used for:
+- **Testing and interacting with RESTful APIs** 📡
+- **Diagnosing server issues** 🛠️
+- **Quickly prototyping API requests** ⚡
 
 ---
 
-## 🛠️ Utilisation de base
+## 🛠️ Basic Usage
 
-### 🔹 Récupérer une page web
+### 🔹 Fetch a Web Page
 ```sh
 curl http://example.com
 ```
-📌 Affiche le contenu brut de la page demandée.
+📌 Displays the raw content of the requested page.
 
 ---
 
-## 🔎 Récupérer des données depuis une API
+## 🔎 Fetch Data from an API
 
-### 📌 Obtenir les posts depuis JSONPlaceholder
+### 📌 Get Posts from JSONPlaceholder
 ```sh
 curl https://jsonplaceholder.typicode.com/posts
 ```
-📌 Renvoie un tableau JSON contenant des posts.
+📌 Returns a JSON array containing posts.
 
-### 📌 Afficher uniquement les en-têtes de la réponse
+### 📌 Display Only the Response Headers
 ```sh
 curl -I https://jsonplaceholder.typicode.com/posts
 ```
-📌 Affiche uniquement les en-têtes HTTP, utiles pour voir les **codes de statut**, **types de contenu**, **cache**, etc.
+📌 Shows only the HTTP headers, useful for checking **status codes**, **content types**, **cache**, etc.
 
 ---
 
-## ⚙️ Utilisation des options avancées
+## ⚙️ Advanced Options Usage
 
-### 🔹 Effectuer une requête POST
+### 🔹 Perform a POST Request
 ```sh
 curl -X POST -d "title=foo&body=bar&userId=1" \
      https://jsonplaceholder.typicode.com/posts
 ```
-📌 Simule l'ajout d'un post. L'API de JSONPlaceholder retourne une réponse confirmant l'ajout avec un `id` = 101.
+📌 Simulates adding a post. The JSONPlaceholder API returns a response confirming the addition with an `id` = 101.
 
-### 🔹 Envoyer des données en JSON avec des en-têtes spécifiques
+### 🔹 Send JSON Data with Specific Headers
 ```sh
 curl -X POST -H "Content-Type: application/json" \
      -d '{"title": "foo", "body": "bar", "userId": 1}' \
      https://jsonplaceholder.typicode.com/posts
 ```
-📌 Ajoute un `Content-Type: application/json` pour préciser que les données sont au format JSON.
+📌 Adds a `Content-Type: application/json` header to specify that the data is in JSON format.
 
-### 🔹 Formater la sortie JSON (nécessite `jq`)
+### 🔹 Format JSON Output (Requires `jq`)
 ```sh
 curl -s https://jsonplaceholder.typicode.com/posts | jq
 ```
-📌 `jq` permet d'afficher et filtrer du JSON de manière plus lisible.
+📌 `jq` allows for more readable and filtered JSON output.
 
 ---
 
-## 📌 Résultats attendus
+## 📌 Expected Results
 
-✅ `curl --version` affiche les détails de la version installée.
-✅ `curl https://jsonplaceholder.typicode.com/posts` renvoie des posts au format JSON.
-✅ `curl -I ...` affiche uniquement les en-têtes HTTP.
-✅ Une requête `POST` retourne une réponse confirmant la création de données.
+✅ `curl --version` displays the installed version details.
+✅ `curl https://jsonplaceholder.typicode.com/posts` returns posts in JSON format.
+✅ `curl -I ...` displays only the HTTP headers.
+✅ A `POST` request returns a response confirming data creation.
 
-📌 **Astuce** : Ajoutez `-v` pour voir les détails des requêtes, et `-o fichier.txt` pour enregistrer la sortie dans un fichier.
+📌 **Tip**: Add `-v` to see request details, and `-o file.txt` to save output to a file.
+
