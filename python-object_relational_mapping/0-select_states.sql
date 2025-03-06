@@ -8,7 +8,4 @@ CREATE TABLE IF NOT EXISTS states (
     PRIMARY KEY (id)
 );
 
-DELETE FROM states;
-ALTER TABLE states AUTO_INCREMENT = 1;
-
 INSERT INTO states (name) VALUES ("California"), ("Arizona"), ("Texas"), ("New York"), ("Nevada");
