@@ -9,7 +9,7 @@ if __name__ == "__main__":
     )
     cur = db.cursor()
     # Modifier la requête pour récupérer les états dont le nom commence par "N"
-    query = """SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id"""
+    query = """SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id BY ASC;"""
     cur.execute(query)
     # Exécuter la requête
     rows = cur.fetchall()
